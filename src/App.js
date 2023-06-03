@@ -1,8 +1,10 @@
+import Slider from "./Components/Slider";
+
 function App() {
   return (
-    <div>
-      hello world
-    </div>
+    <>
+      <Slider />
+    </>
   );
 }
 export default App;
