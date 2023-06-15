@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./login.css";
-// rafce
-const Login = () => {
+
+export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -43,10 +42,10 @@ const Login = () => {
   };
 
   //로그인 성공시, 유저정보(토큰,닉네임 등)가지고 다른페이지로 이동
-  const navigate = useNavigate();
-  const handlePageChange = (e) => {
-    navigate("/welcome");
-  };
+  // const navigate = useNavigate();
+  // const handlePageChange = (e) => {
+  //   navigate("/welcome");
+  // };
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -106,15 +105,11 @@ const Login = () => {
             <p className="errorTxt">비밀번호가 일치하지 않습니다.</p>
           )}
         </div>
-        <button
-          disabled={notAllow}
-          onClick={handlePageChange}
-          className="loginBtn"
-        >
+        <button disabled={notAllow} className="loginBtn">
           로그인
         </button>
         <a href="#" className="signIn">
-          이메일로 회원가입dddddddddd
+          이메일로 회원가입
         </a>
       </form>
     </section>
